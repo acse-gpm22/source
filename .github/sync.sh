@@ -22,6 +22,7 @@ SYNC_FILE=".github/sync.yml"
 PATTERN='.*..-repo-destination'
 
 # Write to $SYNC_FILES the repos to be synced
+#   1. data-platform-<name>-template must have he flag "template-data-rtl-base"
 # REPOS=($(gh repo list $ORG --source \
 #         --visibility "private" \
 #         --topic "template-data-rtl-base" \
