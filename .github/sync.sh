@@ -17,9 +17,18 @@ done
 SAVEIFS=$IFS
 IFS=$'\n'
 SYNC_FILE=".github/sync.yml"
+# ORG="lbg-cloud-platform"
+# PATTERN="data-platform-.*..-template"
 PATTERN='.*..-repo-destination'
 
 # Write to $SYNC_FILES the repos to be synced
+# REPOS=($(gh repo list $ORG --source \
+#         --visibility "private" \
+#         --topic "template-data-rtl-base" \
+#         --json name \
+#         --jq '.[].name' \
+#         --limit 1000 |
+#         grep -e $PATTERN))
 REPOS=($(gh repo list --source \
         --json name \
         --jq '.[].name' \
